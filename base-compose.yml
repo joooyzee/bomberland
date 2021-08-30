@@ -38,3 +38,8 @@ services:
             dockerfile: Dockerfile.dev
         volumes:
             - ./typescript:/app
+
+    standstill:
+        build:
+            context: standstill
+            dockerfile: Dockerfile
