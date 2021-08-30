@@ -33,7 +33,7 @@ class ForwardModel:
         if data_type == "info":
             # no operation
             pass
-        elif data_type == "next_game_state":
+        elif data_type == "game_state":
             payload = data.get("payload")
             await self._on_next_state(payload)
         else:
