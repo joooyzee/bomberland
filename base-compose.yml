@@ -2,6 +2,8 @@ version: "3"
 services:
     game-server:
         image: coderone.azurecr.io/game-server:720
+        volumes:
+            - ./logs:/app/logs 
 
     python3-agent:
         build:
@@ -38,8 +40,3 @@ services:
             dockerfile: Dockerfile.dev
         volumes:
             - ./typescript:/app
-
-    standstill:
-        build:
-            context: standstill
-            dockerfile: Dockerfile
